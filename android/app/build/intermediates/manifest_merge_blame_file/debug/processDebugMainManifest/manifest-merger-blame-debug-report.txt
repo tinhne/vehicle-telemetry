@@ -1,0 +1,206 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.vehicletelemetry"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:3:5-66
+11-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:4:5-76
+12-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:4:22-74
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+13-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:5:5-86
+13-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:5:22-84
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:6:5-78
+14-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:6:22-76
+15    <!--
+16        android.hardware.type.automotive:
+17        Makes this app appear in Android Automotive OS launcher.
+18        required="false" = also installable on phones for dev.
+19    -->
+20    <uses-feature
+20-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:12:5-93
+21        android:name="android.hardware.type.automotive"
+21-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:12:19-66
+22        android:required="false" />
+22-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:12:67-91
+23    <uses-feature
+23-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:13:5-15:36
+24        android:name="android.software.leanback"
+24-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:14:9-49
+25        android:required="false" />
+25-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:15:9-33
+26    <uses-feature
+26-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:16:5-18:36
+27        android:name="android.hardware.touchscreen"
+27-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:17:9-52
+28        android:required="false" />
+28-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:18:9-33
+29
+30    <permission
+30-->[androidx.core:core:1.13.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/ce7527bb4ca5056ff434c635abde9fd1/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+31        android:name="com.vehicletelemetry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.13.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/ce7527bb4ca5056ff434c635abde9fd1/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.13.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/ce7527bb4ca5056ff434c635abde9fd1/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.vehicletelemetry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.13.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/ce7527bb4ca5056ff434c635abde9fd1/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.13.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/ce7527bb4ca5056ff434c635abde9fd1/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+35
+36    <application
+36-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:20:5-54:19
+37        android:name="com.vehicletelemetry.VehicleTelemetryApp"
+37-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:21:9-44
+38        android:allowBackup="false"
+38-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:27:9-36
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.13.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/ce7527bb4ca5056ff434c635abde9fd1/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+40        android:banner="@drawable/ic_car"
+40-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:22:9-42
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:icon="@mipmap/ic_launcher"
+43-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:24:9-43
+44        android:label="Vehicle Telemetry"
+44-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:23:9-42
+45        android:networkSecurityConfig="@xml/network_security_config"
+45-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:28:9-69
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:25:9-54
+47        android:testOnly="true"
+48        android:theme="@style/Theme.VehicleTelemetry" >
+48-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:26:9-54
+49        <activity
+49-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:30:9-41:20
+50            android:name="com.vehicletelemetry.presentation.main.MainActivity"
+50-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:31:13-59
+51            android:exported="true"
+51-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:32:13-36
+52            android:launchMode="singleTop"
+52-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:33:13-43
+53            android:screenOrientation="landscape" >
+53-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:34:13-50
+54            <intent-filter>
+54-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:35:13-40:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:36:17-68
+55-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:36:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:37:17-76
+57-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:37:27-74
+58                <!-- AAOS launcher category -->
+59                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+59-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:39:17-85
+59-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:39:27-83
+60            </intent-filter>
+61        </activity>
+62
+63        <!--
+64            foregroundServiceType="dataSync":
+65            Required on Android 14+ for services maintaining
+66            persistent network connections (our WebSocket telemetry stream).
+67            connectedDevice was used previously but requires extra Bluetooth/USB/NFC
+68            permissions that don't apply to a pure network WebSocket connection.
+69        -->
+70        <service
+70-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:50:9-53:55
+71            android:name="com.vehicletelemetry.service.TelemetryForegroundService"
+71-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:51:13-63
+72            android:exported="false"
+72-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:52:13-37
+73            android:foregroundServiceType="dataSync" />
+73-->/Users/trungtinh/Downloads/vehicle-telemetry-system/android/app/src/main/AndroidManifest.xml:53:13-53
+74
+75        <activity
+75-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/trungtinh/.gradle/caches/9.0.0/transforms/d27cc396f24393108bd92886116b2553/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+76            android:name="androidx.compose.ui.tooling.PreviewActivity"
+76-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/trungtinh/.gradle/caches/9.0.0/transforms/d27cc396f24393108bd92886116b2553/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+77            android:exported="true" />
+77-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/trungtinh/.gradle/caches/9.0.0/transforms/d27cc396f24393108bd92886116b2553/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+78
+79        <provider
+79-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+80            android:name="androidx.startup.InitializationProvider"
+80-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:25:13-67
+81            android:authorities="com.vehicletelemetry.androidx-startup"
+81-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:26:13-68
+82            android:exported="false" >
+82-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:27:13-37
+83            <meta-data
+83-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+84-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:30:17-75
+85                android:value="androidx.startup" />
+85-->[androidx.emoji2:emoji2:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/019e474ac25029a901d88723c7be2ed2/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:31:17-49
+86            <meta-data
+86-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/86d65aeb9cb3addf98c8dca32a7eaee3/transformed/jetified-lifecycle-process-2.9.1/AndroidManifest.xml:29:13-31:52
+87                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+87-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/86d65aeb9cb3addf98c8dca32a7eaee3/transformed/jetified-lifecycle-process-2.9.1/AndroidManifest.xml:30:17-78
+88                android:value="androidx.startup" />
+88-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/86d65aeb9cb3addf98c8dca32a7eaee3/transformed/jetified-lifecycle-process-2.9.1/AndroidManifest.xml:31:17-49
+89            <meta-data
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+90                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+90-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+91                android:value="androidx.startup" />
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+92        </provider>
+93
+94        <service
+94-->[androidx.room:room-runtime-android:2.7.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/6cf448f7d1f54c66f0834eac945b1758/transformed/jetified-room-runtime-release/AndroidManifest.xml:24:9-28:63
+95            android:name="androidx.room.MultiInstanceInvalidationService"
+95-->[androidx.room:room-runtime-android:2.7.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/6cf448f7d1f54c66f0834eac945b1758/transformed/jetified-room-runtime-release/AndroidManifest.xml:25:13-74
+96            android:directBootAware="true"
+96-->[androidx.room:room-runtime-android:2.7.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/6cf448f7d1f54c66f0834eac945b1758/transformed/jetified-room-runtime-release/AndroidManifest.xml:26:13-43
+97            android:exported="false" />
+97-->[androidx.room:room-runtime-android:2.7.1] /Users/trungtinh/.gradle/caches/9.0.0/transforms/6cf448f7d1f54c66f0834eac945b1758/transformed/jetified-room-runtime-release/AndroidManifest.xml:27:13-37
+98
+99        <receiver
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+100            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+101            android:directBootAware="false"
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+102            android:enabled="true"
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+103            android:exported="true"
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+104            android:permission="android.permission.DUMP" >
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+106                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+109                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+110            </intent-filter>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+112                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+113            </intent-filter>
+114            <intent-filter>
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+115                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/trungtinh/.gradle/caches/9.0.0/transforms/b413547d8778485f415a6e54286f4f7c/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+116            </intent-filter>
+117        </receiver>
+118    </application>
+119
+120</manifest>

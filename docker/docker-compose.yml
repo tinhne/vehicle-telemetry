@@ -1,0 +1,47 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: vt_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       vehicle_telemetry
+      POSTGRES_USER:     telemetry_user
+      POSTGRES_PASSWORD: telemetry_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U telemetry_user -d vehicle_telemetry"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: vt_backend
+    restart: unless-stopped
+    environment:
+      DB_URL:  jdbc:postgresql://postgres:5432/vehicle_telemetry
+      DB_USER: telemetry_user
+      DB_PASS: telemetry_pass
+      SERVER_PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL","curl -f http://localhost:8080/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  postgres_data:
+    name: vt_postgres_data

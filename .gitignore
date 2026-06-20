@@ -1,0 +1,32 @@
+# ── Android ───────────────────────────────────────────────────────────────
+*.iml
+.gradle/
+local.properties
+android-app/.idea/
+android-app/*/build/
+android-app/captures/
+android-app/.externalNativeBuild/
+android-app/.cxx/
+
+# ── Backend ────────────────────────────────────────────────────────────────
+backend/.gradle/
+backend/build/
+backend/.idea/
+backend/out/
+backend/logs/
+
+# ── IntelliJ / Android Studio ─────────────────────────────────────────────
+.idea/
+*.iws
+*.ipr
+.DS_Store
+
+# ── Docker ────────────────────────────────────────────────────────────────
+docker/postgres/data/
+
+# ── Secrets (NEVER commit these) ─────────────────────────────────────────
+*.env
+.env.local
+application-prod.yml
+keystore.jks
+google-services.json
