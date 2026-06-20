@@ -7,7 +7,7 @@ android-app/*/build/
 android-app/captures/
 android-app/.externalNativeBuild/
 android-app/.cxx/
-
+7
 # ── Backend ────────────────────────────────────────────────────────────────
 backend/.gradle/
 backend/build/
@@ -30,3 +30,14 @@ docker/postgres/data/
 application-prod.yml
 keystore.jks
 google-services.json
+
+# Build outputs
+*.class
+*.apk
+*.aab
+
+android/app/build/
+android/build/
+backend/bin/
+backend/build/
+
