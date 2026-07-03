@@ -1,8 +1,6 @@
 # 🚗 Vehicle Monitoring & Telemetry System
 
 > **Production-style Android Automotive OS + Spring Boot project**
-> Built for junior/fresher interviews at LG Electronics Vehicle Solution, Bosch, Harman, Hyundai Mobis
-
 ---
 
 ## 📐 Architecture Overview
@@ -305,46 +303,3 @@ cd android-app
 | `TelemetryForegroundService.kt` | Keeps connection alive in background |
 | `docker-compose.yml` | Full stack orchestration |
 
----
-
-## 🗓 7-Day Development Roadmap
-
-| Day | Focus | Deliverable |
-|-----|-------|-------------|
-| 1 | Architecture + Project setup | Both projects compile, emulator boots |
-| 2 | Backend WebSocket + Simulator | Backend broadcasts data, testable in Postman |
-| 3 | Android WebSocket client | App connects, raw JSON visible in Logcat |
-| 4 | Dashboard UI + Gauges | Animated speedometer and RPM gauge working |
-| 5 | Warning system + Foreground Service | Alerts appear on dashboard |
-| 6 | History screen + REST API + Tests | Full feature complete |
-| 7 | Polish, README, Git cleanup | Interview-ready demo |
-
-### Git commit strategy (Conventional Commits)
-```bash
-git commit -m "feat(backend): add STOMP WebSocket configuration"
-git commit -m "feat(android): implement TelemetryWebSocketClient with reconnect"
-git commit -m "feat(ui): add SpeedGauge Canvas component"
-git commit -m "fix(websocket): handle STOMP heartbeat frame correctly"
-git commit -m "test(backend): add WarningService threshold unit tests"
-git commit -m "docs: update README with emulator setup guide"
-```
-
----
-
-## 🎤 Interview Talking Points
-
-**"Why Foreground Service?"**
-> "In Android Automotive, the system can kill background processes under memory pressure. A Foreground Service with a persistent notification signals to Android that this is critical user-facing work. It also receives START_STICKY so Android restarts it after OOM kills."
-
-**"Why STOMP over raw WebSocket?"**
-> "STOMP adds topic-based routing over raw WebSocket. Our Android client subscribes to /topic/telemetry and /topic/warnings independently. This makes it easy to add new data streams without changing the connection logic — you just add a new subscription."
-
-**"Why exponential backoff for reconnect?"**
-> "If the backend restarts and 1000 vehicles all try to reconnect simultaneously at fixed intervals, you get a thundering herd problem — the server gets overwhelmed right when it's trying to recover. Exponential backoff with jitter spreads out reconnection attempts, giving the server time to recover."
-
-**"Why sealed class for WebSocketState?"**
-> "Sealed classes give us exhaustive when expressions — the compiler forces you to handle every state. This prevents bugs where the UI shows a stale 'Connecting' spinner because a developer forgot to handle the Error state."
-
-**"What is CAN Bus?"**
-> "CAN (Controller Area Network) Bus is the standard vehicle network protocol (ISO 11898). Every ECU — engine, transmission, ABS — broadcasts frames at speeds up to 1Mbps. In production, our backend's SensorSimulatorService would be replaced by a CAN Bus adapter reading real PID data."
-# vehicle-telemetry
